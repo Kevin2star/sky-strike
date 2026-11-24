@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SKY STRIKE - 비행기 슈팅 게임</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="480" height="720"></canvas>
+
+  <div id="title" class="overlay">
+    <h1>SKY STRIKE</h1>
+    <p class="sub">3 STAGES · BOSS BATTLE</p>
+    <div id="howto" class="panel">
+      <h2>게임 방법</h2>
+      <ul>
+        <li><b>← ↑ → ↓</b> 방향키로 이동</li>
+        <li><b>SPACE</b> 누르고 있으면 총알 발사</li>
+        <li><b>P</b> 일시정지</li>
+        <li>큰 라이프 <span class="red">♥ 3개</span>, 각 라이프마다 작은 라이프 5칸.<br>적 공격에 맞으면 작은 라이프가 깎이고, 모두 소진되면 폭발 후 큰 라이프 1개 소모.</li>
+        <li>적은 클수록 체력과 공격력이 강합니다.</li>
+        <li>스테이지 끝의 보스를 쓰러뜨리면 클리어! 보스는 체력이 줄면 변신합니다.</li>
+        <li>아이템:
+          <span class="green">+ 작은 라이프 회복</span> /
+          <span class="orange">P 공격력 강화</span> /
+          <span class="red">♥ 큰 라이프 회복 (매우 희귀)</span></li>
+      </ul>
+    </div>
+    <button id="startBtn">게임 시작 (Enter)</button>
+  </div>
+
+  <div id="over" class="overlay hidden">
+    <h1 class="red">GAME OVER</h1>
+    <p id="overScore"></p>
+    <button id="retryBtn">다시 하기 (Enter)</button>
+  </div>
+
+  <div id="clear" class="overlay hidden">
+    <h1 class="gold">GAME CLEAR</h1>
+    <p id="clearScore"></p>
+    <button id="againBtn">다시 하기 (Enter)</button>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
